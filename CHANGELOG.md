@@ -2,6 +2,20 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.3 (2026-10-06)
+
+#### New Features
+
+- The directory keeps folders anyone in the tenant can organize, files shared boards in them, and refuses a cycle or a non-empty delete with the app's own rules
+- Home files boards in nested folders, in a Personal tree on this computer and the directory's tree for everyone signed in; Move to…, drag and drop, a breadcrumb, folder search, and delete only when empty
+- The deletion marker is a hint to re-read the list, never the licence to delete
+- The person who shared a board to the directory can delete it for everyone
+- The directory deletes a board for everyone, and lists deletions so every device drops its copy
+
+#### Fixes
+
+- A board's first owner is remembered after unsharing, so no one else can list it or delete it for everyone
+
 ## 0.1.2 (2026-10-06)
 
 #### New Features
