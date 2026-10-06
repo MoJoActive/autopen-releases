@@ -2,6 +2,36 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.2 (2026-10-06)
+
+#### New Features
+
+- Releases cut themselves: once CI passes on main with a feat, fix or perf since the last tag and main has settled for 15 minutes, auto-release tags the next version and starts the release
+- Importing a Figma file says how far it has got, and what landed
+- The directory has its own Entra app registration, Autopen MoJo Active
+- The directory uses Cultivate's Entra app registration
+- The desktop app signs in to the directory with a work account
+- Deploy.sh takes a directory target, and checks only that target's CHANGE-ME values
+- A company board directory Worker, one row per shared board, behind an Entra token
+- Home lists the directory beside Personal boards, and Settings shows the account
+- Windows read the directory, sign in and share through ipc, and hear every change
+- A board directory a fork fills in, which lists an organization's boards behind sign-in
+
+#### Fixes
+
+- A board is republished to the directory only when renamed on this device, so a second device never publishes a joining placeholder or brings back an unshared board
+- A big board opens fitted to what has built so far, instead of at 100% until every image decodes
+- One import note per kind, with how many layers it happened to
+- A Figma file imports every layer, not the first 5,000
+- One board letting go of an image no longer takes it from another
+- A canvas keeps photos at screen size, and gives them back when the board closes
+- A board of big photos no longer takes the canvas down
+- Directory.toml's comment no longer trips deploy.sh's CHANGE-ME check
+- Sign-in uses its own localhost/autopen redirect and accepts the shared registration's v1 tokens
+- Builds leave the directory off until the Entra app registration is filled in
+- The directory names a sharer by sign-in name, so the desktop can tell its own boards
+- A directory that could not be read says so above its boards
+
 ## 0.1.1 (2026-10-06)
 
 #### New Features
