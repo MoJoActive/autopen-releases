@@ -2,6 +2,16 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.5 (2026-10-06)
+
+#### New Features
+
+- A frame an agent grows into its neighbours pushes everything past its old edge aside in the same update, so nothing is ever designed underneath another frame
+
+#### Fixes
+
+- An image whose bytes arrive while its frame is still building draws without a reload
+
 ## 0.1.4 (2026-10-06)
 
 #### New Features
