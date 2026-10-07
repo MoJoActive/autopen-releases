@@ -2,6 +2,22 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.6 (2026-10-07)
+
+#### New Features
+
+- The directory server keeps Drafts named Drafts at the top, refusing a rename or a folder inside it
+- Home is organized around spaces, pins and a Move popover that says what a move will do
+- Home remembers the rows you pinned to the sidebar and the folders you moved boards into lately
+- A new board can be made straight into a folder, and a board on this computer can be renamed or duplicated
+- A board records which computers have it, so Home can tell when a shared board is still only yours
+- New boards have a home: Drafts sits at the top of the shared list, where it can't be renamed, moved or deleted
+
+#### Fixes
+
+- Claude setup shows signed in after a sign-in that finished while a check was still reading the old state
+- New board lays its fields out like Settings, the Move popover stays in the window as it grows, and the level you are at is a destination in the folder picker
+
 ## 0.1.5 (2026-10-06)
 
 #### New Features
