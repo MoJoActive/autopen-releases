@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.8 (2026-10-07)
+
+#### Fixes
+
+- Agents browse in their own pages signed in where the user is, and take turns on the user's tab
+
 ## 0.1.7 (2026-10-07)
 
 #### Fixes
