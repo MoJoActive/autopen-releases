@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.7 (2026-10-07)
+
+#### Fixes
+
+- Browser connects realtime backends over WebSockets, and pasted images reach the agent as board assets
+
 ## 0.1.6 (2026-10-07)
 
 #### New Features
