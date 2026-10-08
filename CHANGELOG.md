@@ -2,6 +2,13 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.13 (2026-10-08)
+
+#### New Features
+
+- Cmd+F finds text on the canvas, highlights every match and steps through them with Enter
+- A button in the top bar checks for updates on demand and says how the check went
+
 ## 0.1.12 (2026-10-08)
 
 #### New Features
