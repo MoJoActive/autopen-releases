@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.9 (2026-10-08)
+
+#### New Features
+
+- The relay keeps an encrypted copy of every board and its images, so a board opens with nobody else online
+
 ## 0.1.8 (2026-10-07)
 
 #### Fixes
