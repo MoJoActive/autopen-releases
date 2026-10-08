@@ -2,6 +2,41 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.12 (2026-10-08)
+
+#### New Features
+
+- The Agent panel explains failures in plain words and offers Continue for runs Autopen closed on
+- Sticky notes render markdown: titles, bullets, numbered lists, bold, italic and code
+- A formats guide gives agents the sizes for devices, social posts, ads, emails, print and store assets
+- The board's side panels float, inset and rounded, with the canvas running beneath them
+- The Agent composer starts taller, text across the full width with + and send underneath
+- The composer's + is a menu: attach files, or use a skill (/)
+- An execute call can wait for its Generate jobs to land with WaitForGenerate, so its screenshots show them
+- A count can show as a clock (1:12) or zero-padded with countFormat time and pad
+- A node riding a path can start part way round with along.offset and lap forever
+- Motion can stretch a node on one axis with scaleX and scaleY tracks
+- Reference skills anywhere in a prompt, yours included, as inline badges
+
+#### Improvements
+
+- Animated screenshots, filmstrips and video export render up to 18x faster and stop freezing the app
+
+#### Fixes
+
+- Clicking and dragging layers on the canvas works like Figma
+- Background blur and blend modes draw on the board instead of nothing
+- An imported page matches the browser pixel for pixel, SVGs, icons and gradient text included
+- Floating panel and composer corners nest concentrically (16px panel, 8px inset, 8px input)
+- The Agent composer asks you to describe what you want
+- The Agent composer's placeholder doesn't name a model
+- The Agent composer's placeholder fits on one line
+- A shader inside a composition runs on the composition's clock, so its poster frame and screenshots match the video
+- An unknown prop warning says which prop to use instead, like effect for shadow
+- An agent's full reply shows in the run view instead of stopping at 2,000 characters
+- A working sub-agent's card shows the step it is on instead of the brief it was given
+- A middle-button pan that leaves the canvas ends instead of staying stuck to the pointer
+
 ## 0.1.11 (2026-10-08)
 
 #### Fixes
