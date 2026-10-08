@@ -2,6 +2,18 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.10 (2026-10-08)
+
+#### New Features
+
+- AUTOPEN_EMBED_SCRIPT puts a build's third-party script, such as a feedback widget, on every page
+
+#### Fixes
+
+- Typing in a field inside a shadow root no longer fires canvas shortcuts
+- Code an agent writes follows that project's CLAUDE.md and skills through to done, release notes included
+- Menus and popovers over the browser page show above it, with a still of the page in its place
+
 ## 0.1.9 (2026-10-08)
 
 #### New Features
