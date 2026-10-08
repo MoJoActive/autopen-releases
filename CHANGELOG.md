@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.14 (2026-10-08)
+
+#### Fixes
+
+- Cmd+F puts the cursor in the find bar's input, so typing searches right away
+
 ## 0.1.13 (2026-10-08)
 
 #### New Features
