@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.11 (2026-10-08)
+
+#### Fixes
+
+- An embedded script's popups open in the person's browser like every other link
+
 ## 0.1.10 (2026-10-08)
 
 #### New Features
