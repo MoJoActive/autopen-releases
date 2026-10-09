@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.16 (2026-10-09)
+
+#### New Features
+
+- Copy as PNG and Copy as HTML from the selection's quick export menu and the right-click menu; right-clicking a selected artboard's background keeps it selected
+
 ## 0.1.15 (2026-10-09)
 
 #### New Features
