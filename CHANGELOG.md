@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.15 (2026-10-09)
+
+#### New Features
+
+- Agents start in the board's linked code folder, so its settings, CLAUDE.md, skills and MCP servers load as if opened there; resumes start where their session did
+
 ## 0.1.14 (2026-10-08)
 
 #### Fixes
