@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.18 (2026-10-12)
+
+#### Fixes
+
+- The Mac smoke test runs on a self-hosted runner, using a throwaway default keychain since the login keychain is locked without a GUI login
+
 ## 0.1.16 (2026-10-09)
 
 #### New Features
