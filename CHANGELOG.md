@@ -2,6 +2,20 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.19 (2026-10-12)
+
+#### New Features
+
+- Variables manager with grouped table, detail and bulk edit, themes page, health checks, and export (CSS, Tailwind v4, W3C tokens, Figma, Autopen JSON) and import with a diff
+- Collapse layers out of the way to labelled chips (Cmd+Shift+C, the layers row, the panel or the context menu); collapsed nodes keep their place and contents but aren't drawn or exported
+- Phosphor (six weights) and Material Symbols (outlined, rounded, sharp) icon libraries alongside lucide, drawn, laid out and exported from their official SVGs; an unknown icon draws a dashed placeholder and is reported to agents
+- Motion editor, a timeline dock for compositions with scene and keyframe editing, panel sections, record keys and scoped asks
+- Timeline edits as pure functions (scenes, cuts, ripple, reorder, keyframes, transitions) and a motion focus block runs can carry
+
+#### Fixes
+
+- A drag's final commit restores what its live steps moved, marker-timed scenes stay put, transitions only replace their own keys
+
 ## 0.1.18 (2026-10-12)
 
 #### Fixes
