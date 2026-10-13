@@ -2,6 +2,13 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.21 (2026-10-13)
+
+#### Fixes
+
+- The user's window is always a board or Home window, never a hidden browser parking or export window, so an agent using the user's browser no longer loses its page mid-navigation
+- A section the capture cannot read imports as a blank placeholder instead of failing the import; ids and tags are read from attributes and the prototype, so a form whose inputs are named id or tagName no longer breaks it
+
 ## 0.1.20 (2026-10-13)
 
 #### New Features
