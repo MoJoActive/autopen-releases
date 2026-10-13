@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.22 (2026-10-13)
+
+#### New Features
+
+- The agent composer shows how much of the Claude plan is used, as session and weekly bars at the end of the model row with a popover for exact numbers and reset times; at a limit, new sends wait with a notice saying when they resume
+
 ## 0.1.21 (2026-10-13)
 
 #### Fixes
