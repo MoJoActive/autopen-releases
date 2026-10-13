@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.20 (2026-10-13)
+
+#### New Features
+
+- Drop an HTML file on the canvas to import it like a browser page, laid out offscreen at the browser panel's viewport and placed at the drop point
+
 ## 0.1.19 (2026-10-12)
 
 #### New Features
