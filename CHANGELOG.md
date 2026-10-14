@@ -2,6 +2,17 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.23 (2026-10-14)
+
+#### New Features
+
+- Home calls the directory's top folders accounts
+- Home gets a rail (Go to, Home, top folders, This computer), a landing page with search, Jump back in and starred Favorites, a table of the directory's top folders, a quick switcher that reopens the folder last open in each, and a tree beside a folder's contents with a list or grid layout; favorites replace pins, and a directory provider can name its top folders
+
+#### Fixes
+
+- Home's list/grid toggle uses the app's segmented control, with even padding and a selected state that shows in dark mode
+
 ## 0.1.22 (2026-10-13)
 
 #### New Features
