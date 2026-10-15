@@ -2,6 +2,16 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.24 (2026-10-15)
+
+#### New Features
+
+- Images and files sent to the agent show with the message in the thread, as thumbnails and name chips; the feed keeps a stored image's url and a file's name, never bytes or full paths
+
+#### Fixes
+
+- A stroke with a zero-width side no longer leaves a faint hairline along that side on the canvas
+
 ## 0.1.23 (2026-10-14)
 
 #### New Features
