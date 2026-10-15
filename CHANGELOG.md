@@ -2,6 +2,24 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.26 (2026-10-15)
+
+#### New Features
+
+- Ask on the selection names who it reaches and hands off to that agent's conversation in the pane, quick edits report beside the selection with Undo, and agents ask the person through an ask_question card in the thread instead of notes on the canvas
+- Rotation sits under Position as in Figma, a degrees field beside Rotate 90° right, Flip horizontal and Flip vertical buttons
+- Copy as SVG in the right-click menu and the quick export's Copy group puts the selection on the clipboard as SVG markup and as the system's SVG image type, and the Export dialog writes an .svg file with its fonts inside
+- Export(ids, "svg", outPath) writes the nodes as one SVG drawn as on the canvas, to a folder or a .svg file
+- ToSvg draws picked nodes as one SVG that matches the canvas pixel for pixel (layout boxes, Skia-shaped text with every glyph placed, strokes, shadows, blurs, gradients, images, icons), with fonts embedded on request and an svg format for exportNodes
+- One Share button opens a popover with a link per audience (edit in the app, watch live in a browser, present as slides) that can open at the selected layer; Present and View link leave the top bar, and connection status shows only when the board is not connected
+- Sixteen cursor colors to pick from in Settings > Profile, wrapping to a second row; a name's default color still comes from the first eight, so nobody's default changes
+- Copy link to layer in the right-click menu copies a link that opens the board with that layer selected and zoomed to; a board this computer already has opens straight there, any other asks to join first
+
+#### Fixes
+
+- Layers turn about their center as in Figma, from the rotation field, Rotate 90° right and the corner drag; a multi-selection orbits its shared center
+- The rail's accounts button on Home goes straight to the accounts list instead of opening the switcher
+
 ## 0.1.25 (2026-10-15)
 
 #### New Features
