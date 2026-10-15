@@ -2,6 +2,16 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.25 (2026-10-15)
+
+#### New Features
+
+- Deleted boards go to Recently deleted on Home for 30 days, where they can be restored or deleted forever, and a delete's toast offers Undo; a board its sharer deleted for everyone still leaves joined computers for good
+
+#### Fixes
+
+- HTML files up to 50 MB import when dropped on the canvas, written into a blank page instead of a data URL that Chromium caps at 2 MB; images a page makes from blobs are kept as data URLs, so bundled exports import with their pictures
+
 ## 0.1.24 (2026-10-15)
 
 #### New Features
