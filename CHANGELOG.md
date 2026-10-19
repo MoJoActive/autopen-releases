@@ -2,6 +2,14 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.27 (2026-10-19)
+
+#### New Features
+
+- Milestones tab lists where agents finished work with a live thumbnail of each layer and zooms there on click; agents mark them with mark_milestone, a run that marks none gets an Auto one for the frames it edited, and the done message carries Worked on chips on desktop and iOS
+- Calls that name no board go to the session's own or last-used board, or the only open one, and refuse to guess among several; agents open closed boards in the background by id and keep the boards they work on loaded until they disconnect
+- Sideload publishing and the in-app update banner
+
 ## 0.1.26 (2026-10-15)
 
 #### New Features
