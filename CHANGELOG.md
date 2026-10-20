@@ -2,6 +2,33 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.28 (2026-10-20)
+
+#### New Features
+
+- The agent sheet shows sub-agents as cards that open into their run, and keeps working while background ones run
+- Sub-agents show as live cards where the agent started them, open into their own run, and background ones stay in a Still running tray with Stop until they report
+- Keep sub-agents and background tasks in the feed: task_started/task_ended events, runs stay open while background work runs, stopTask
+
+#### Improvements
+
+- An edit marks the parts of raster tiles it drew over instead of throwing the tiles away, and they are painted again from the picture clipped to those parts, so zoomed out a small edit no longer replays a whole frame; check-reuse can run a chosen list of edits in turn
+- A relay link says hello once the room's copy is in, so peers send only what it lacks instead of the whole board again, and readers don't listen for updates, which made Yjs encode a whole board as it arrived; the canvas stops forgetting kept trees at the first one it has none for, and a frame's first picture records without breaks
+- The Components tab reads which nodes are reusable off their maps instead of copying every node of the board on each edit
+- A rebuild redoes only what an edit changed: trees keep the objects of unchanged subtrees, which expand and resolve once, each frame keeps its Yoga tree so layout touches only changed paths and reads back only what Yoga laid out again, scenes hide nodes through a set instead of changing the shared tree, and an edit throws away only the raster tiles it drew over; check-reuse also compares tiled views, variable edits and moves of top-level frames
+- An edit lays out and records only the fixed-size frames it touched: their children's boxes and their pictures are kept between builds and reused where nothing inside changed, recording yields to input between frames, components expand once per instance chain, and resolving variables copies only what holds one; packages/viewer/scripts/check-reuse.ts checks every box and pixel against a fresh build after random edits to a real board
+- Text measures find their paragraph by node instead of rebuilding its key on every call, and Yoga's defaults are left unset; packages/viewer/scripts/bench-build.ts times building a real board's largest frame
+- Board thumbnails draw one board at a time once it has been still a few seconds, drop each board's layout once the picture is taken, and pause while a board is open, so the list never holds big boards twice; phones keep 256MB of decoded images instead of 768MB
+- An image that arrives after its frame was built records the frame again from the same layout instead of laying out the whole frame again, and a burst of arrivals records once; apps/web/scripts/board-perf.ts measures a real board in the browser viewer as a phone
+- Boards open and rebuild faster: one text cache per renderer outlives builds and remembers layouts and measures, fonts count as new only when a face really registers, and a window loads the board from disk while main opens it instead of waiting for main to encode it
+- Only the animated parts of a section redraw each frame, so a looping composition inside a big frame no longer re-lays-out and repaints the whole section every frame or keeps the app from idling; the play bar finds compositions once per board change instead of on every camera move
+
+#### Fixes
+
+- Only the time spent rendering raster tiles counts against a frame's tile budget, so drawing the rest of the frame (other frames' tiles, live shaders) can no longer leave a tile waiting forever with a blurry stand-in
+- An update too big for one relay message goes out in parts the size the room keeps the board in, so a big paste or a whole board for a new peer gets through instead of the relay closing the sender's socket and it never arriving; older clients ignore parts, which never reached them anyway
+- A turn that ends on background shells alone says so instead of 0 still running
+
 ## 0.1.27 (2026-10-19)
 
 #### New Features
