@@ -2,6 +2,19 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.30 (2026-10-21)
+
+#### New Features
+
+- Home gets one sidebar on every page, with Favorites grouped by account and every account's folders as a tree that takes drags, and pages with one header band and folders as tiles
+- A Home drop target can refuse and say why, so the drag pill explains instead of just not landing
+- Home's New board takes a place, so a folder's menu can make a board right there
+- Home-model groups favorites by account, finds a folder's account and sorts boards by day, for the new Home sidebar and Recent page
+
+#### Fixes
+
+- Opening a board by its hash works again after leaving it for Home, which the window ignored as its own write
+
 ## 0.1.29 (2026-10-21)
 
 #### New Features
