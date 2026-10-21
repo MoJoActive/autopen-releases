@@ -2,6 +2,25 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.29 (2026-10-21)
+
+#### New Features
+
+- Right-click a frame to use it as the board preview, so Home's card shows that frame instead of the whole board
+- Boards you open become tabs in the top bar
+- Main keeps each window's tabs loaded and hands a board to the window that has it
+- The rules for a window's board tabs live in one place
+- An Agents dialog sets up the board's agents (name, instructions, their conversations, reset), the composer picks who a new conversation is with, and right-click offers Edit <agent> and Rename conversation; scripts/verify-board-agents.ts checks it in the app
+- A board can set up its agents, each with its own name and instructions every conversation with it starts from, and its conversations can run side by side; conversations can carry a title; the feed reads both, so desktop, phone and cursors all show the board's names
+- Background sub-agents show once, in the thread, and the Still running tray becomes one line above the composer that counts them, with Show to scroll to their cards and Stop all
+
+#### Fixes
+
+- The top bar's tab list leaves room for the active tab's ring and shadow, which its scroll box clipped
+- Sidebar tabs drop to icons when their labels stop fitting, measured instead of a 400px breakpoint, so the row never runs past the panel
+- Tabs keep the strip, the hash and the menus to themselves
+- A closed board lets go of its WebGL context instead of waiting to be collected
+
 ## 0.1.28 (2026-10-20)
 
 #### New Features
