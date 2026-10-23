@@ -2,6 +2,91 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.32 (2026-10-23)
+
+#### New Features
+
+- The Milestones tab drops milestones whose layers were all deleted, since there is nothing to go to
+- The empty Skills tab explains that built-ins need no adding and offers to add the team's own, and every tab header gets a bottom border
+- A Code tab on the rail links this board's code folder on this device, out of Device memory
+- The sidebar rail's tooltips show at once, beside the icon instead of under it
+- Memory's rail icon is a brain, so it no longer reads as a second book beside Skills
+- The usage badge is smaller and names the plan's size, Pro, 5x Max or 20x Max, from the tier the Claude CLI keeps in its config
+- The skill dialog and the Skills home say agents use built-in skills on their own when a task needs one, so nobody adds them out of habit
+- A new conversation asks what we are making, with eight kinds of work that each add their built-in skill, instead of a sparkle and two fixed examples
+- The left sidebar opens 400px wide
+- The left sidebar's tabs move into a 44px icon rail on its inside edge, Skills gets its own tab, every tab but Agent gets a titled header, the Agent item shows the open agent's avatar with a dot when one needs you, and Option+1 to 8 switch tabs on a Mac
+- On a board with no style, an agent starting new design work offers three fitting styles with ask_question and designs in the one picked
+- A question offering styles shows each as a specimen row, with Three others, Browse all styles and Use for this board, which sets the picked style in one undo step before answering
+- Ask_question takes a style key on an option to show that catalog style's preview, dropping a key the catalog doesn't have instead of failing
+- A question's option can carry a catalog style key, kept through validation when well formed, and an answer that saved the picked style tells the agent so
+- The Board tab sets an optional style from a gallery of 67, searchable by name or feel, applied in one undoable step, and every agent run on the board follows it
+- Get_style takes hallmark: and autopen: keys and lists Hallmark's themes, and get_app_state reports each board's style
+- Every run hears the board's style, to design new work in it and read its brief first, or that it has none and should choose a look itself
+- A board can carry one style, and applying it writes its variables without touching ones the board already had, removing the previous style's own
+- A style catalog lists Autopen's 26 styles and Hallmark's 41 themes as cards with swatches, fonts and moods, and gives each one's board variables and brief
+- New agent work in the Board tab lets you choose Add to board or Review first, and Review first says once where it put Final, Drafts and Archive, with Show on board and Undo
+- Hallmark ships as two built-ins, designing a page in Website design and an anti-slop review in Craft
+- Hallmark.md translates Hallmark for the canvas, the way craft.md does for the craft skills
+- Wireframes and low-fi exploration is a built-in guide, three arrangements at the real screen size
+- UX audit is a built-in guide, Nielsen's ten heuristics as a board of findings with the evidence pinned
+- Android screens is a built-in guide, with the Material 3 metrics an iOS guide cannot stand in for
+- A built-in's folder path starts with "Built in", so Autopen's Animation folder and your team's never read alike
+- Opening a built-in skill says so and offers Duplicate, instead of a Save it can never do
+- Built-in skills get a section of their own on the Skills home, as smaller cards under the folders your team wrote
+- Empty and error states is a built-in guide, because six different screens get called the empty state
+- Onboarding flows is a built-in guide, where the deliverable is the flow laid out left to right
+- Forms is a built-in guide, opening with which fields to delete rather than how to lay them out
+- Icon sets is a built-in guide, where the work is choosing names rather than drawing marks
+- Brand guidelines sheet is a built-in guide, eight sheets whose content is the board's own tokens
+- Logo and wordmark is a built-in guide, in a new Brand folder, built around never drawing a logo from primitives
+- Pricing pages is a built-in guide, for the whole page rather than the band landing-page.md covers
+- Social posts and ads is a built-in guide, for feed posts, stories, carousels and display ads
+- Email campaigns is a built-in guide, in a new Marketing folder, for email that survives Outlook, blocked images and a preview pane
+- The seven vendored craft skills are built in, in a Craft folder, each headed by the line that says its CSS rules are canvas properties here
+- Shortcuts dialog, embed widget capture and hiding layers (work in progress committed before merging Skills and Brainstorm)
+- Skills is one Home page with folder cards, a folder page and an editor without a tile, and the composer gets one skill menu with the merged model control
+- The Board tab and the canvas menu call the middle frame Drafts, and a review heads the menu on a Brainstorm board
+- Get_app_state names the Drafts frame, so an agent reading the Brainstorm rule builds where the board says
+- The Brainstorm layout's middle frame is Drafts, and a board laid out before the rename has its WIP frame taken over and renamed
+- The Home sidebar lists the skill folders under Skills, opens one and takes a skill dropped on it
+- Approving or archiving a frame reads as one line with the button as a pill, and the agent gets the rules behind it
+- The composer's skill menus check off several skills at once, and the chips wrap above the message
+- The Skills page drops Most used, and skills stop recording their own use
+- A folder's skills read as cards, and the Skills page takes the find keys
+- The Skills page is folder cards, most used and a table, and a skill opens as a document with its history
+- Home has a Skills page with folders and an editor, boards get a Skills section, and the composer picks skills per message
+- List_skills shows an outside agent the skills people keep here, and read_skill reads one by id
+- Skills get folders, a version history and an icon, and every injected skill says who wrote it
+- The Notes tab becomes Memory, holding the board's shared memory and this device's, with the same wording in what agents read
+- A Board tab carries the Brainstorm switch, and approving or setting aside a WIP frame from the canvas menu starts an agent run that does the move
+- The Brainstorm rule leaves the moves to the agent, which knows where in Final a screen belongs and what it replaces, so the layout module only finds and creates the three frames
+- Skills live in three places, the organization's list, this computer and built in, behind one typed store
+- A run starts with the skills its board attached, and with the ones the person picked for that message
+- A board carries the skills its people attached, so every device's agents follow the same ones
+- A Brainstorm switch in the Notes tab lays the board out as Final, WIP and Archive, and the canvas menu approves a WIP frame into Final or archives it
+- An in-app run's prompt carries the board's layout rule next to its notes, so a Brainstorm board binds the agent it starts
+- Get_app_state hands every agent the Brainstorm rule and the ids of the Final, WIP and Archive frames when a board runs the layout
+- The Brainstorm layout, a board setting with Final, WIP and Archive frames, where approving a WIP frame moves it into Final and what it replaces goes to Archive
+
+#### Fixes
+
+- The milestone badge in chat and the Milestones tab use the rail's map-pin-check
+- Menus and popovers sit darker than the panel in dark mode, so they no longer blend into the sidebar
+- The agent composer rounds like the sidebar instead of squaring off at 0px
+- The skill menu stops offering Autopen's old /commands beside the built-ins they duplicate; a pasted /command still runs
+- The Agent tab's header names the agent without repeating the rail's avatar, and sits on the rail's centre line at 40px like every other tab
+- Switching or clearing a board style keeps any of its variables a layer still uses, and the note's Undo takes back only the style change
+- Undo on the Review first note keeps any Final, Drafts or Archive frame that has work in it, removing only the ones still empty
+- Geist and Mona Sans are on Google Fonts, so Lumen, Specimen, Studio and Midnight need no substitute
+- The model popover spans the agent panel instead of running off it, its model list scrolls on its own so effort and usage stay in view, and Extra high no longer wraps
+- A folder's tint keeps its hue in both themes, a skill's instructions read as a document, and the skill and folder menus carry their icons
+- A skill's card grows with its instructions, so the count line sits below them instead of over them
+- Windows saves wait out a briefly locked meta.json, so a board opens and stops saying Joining once it has loaded
+- The slash menu keeps naming autopen's own skills first, and verify-usage drives the merged model control
+- The Brainstorm frames take a tint that stands out from the canvas, so the three zones read at a glance behind white screens
+- A canvas menu taller than the window scrolls in the room it has, instead of running off the bottom where the last rows cannot be clicked
+
 ## 0.1.31 (2026-10-23)
 
 #### New Features
