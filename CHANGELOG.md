@@ -2,6 +2,14 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.31 (2026-10-23)
+
+#### New Features
+
+- List_milestones gives an agent the board's milestones, newest first, so it can find where earlier work finished or pick up where someone left off
+- Get_presence tells an agent who else is on a board, people and other agents, and which layers each has selected or is working on
+- Get_invite_link hands out a board's share links and join_board takes one, so an agent can bring a shared board onto this device and work on it
+
 ## 0.1.30 (2026-10-21)
 
 #### New Features
