@@ -2,6 +2,25 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.34 (2026-10-26)
+
+#### New Features
+
+- A one-layer link draws only that layer, loading shows real progress, and a corner zoom control with a first-visit hint
+- Settings has a Usage section with Claude tokens, agent runs and storage for the boards on this computer, a page per board, and the Board tab shows the board's last 30 days with a Details link
+- Every finished Claude run adds its tokens to its board's usage counter, phone requests included, and each board's usage and storage, here and on the relay, can be read for Settings
+- The relay answers how many sealed bytes it keeps for a board, edit history and images, and the net client asks on a socket of its own so an older relay just reads as unknown
+- A finished run reports the tokens it used per model, input, output, cache reads and cache writes, summed over every turn, and the feed leaves them out
+- Each board keeps a grow-only usage counter of Claude tokens and runs per device, day and model, with API list prices to estimate cost
+- Share is one link: pick Edit, View or Present, choose the whole board or one frame, then copy it or scan its QR code
+
+#### Fixes
+
+- An unpriced model and an unknown online size read as n/a in the Usage tables
+- The Usage tables lay out in rows beside the plan usage meter's styles, the period switch lines up with the tiles, the Board tab rereads storage as the board grows, and empty periods say so
+- One-frame share copy says the link still carries the board key
+- One-frame share copy promises what the link does today, until scoped links stop sending the rest
+
 ## 0.1.33 (2026-10-26)
 
 #### New Features
