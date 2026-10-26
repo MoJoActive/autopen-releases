@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.36 (2026-10-26)
+
+#### Fixes
+
+- The browser viewer's security policy allows Sprout's widget script, so watch and present links show the feedback button again
+
 ## 0.1.35 (2026-10-26)
 
 #### New Features
