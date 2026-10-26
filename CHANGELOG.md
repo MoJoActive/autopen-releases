@@ -2,6 +2,12 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.33 (2026-10-26)
+
+#### New Features
+
+- Boards name a Sprout project in the Share menu, and their browser watch and present links show its feedback widget
+
 ## 0.1.32 (2026-10-23)
 
 #### New Features
