@@ -2,6 +2,30 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.35 (2026-10-26)
+
+#### New Features
+
+- Usage counts outside Claude sessions: tokens include them, runs show + N external sessions, a Where the tokens came from card splits runs in Autopen from external sessions with the tool calls from outside, board rows and people say how many sessions came from outside, and the Board tab shows runs and how many outside
+- Settings > Claude has a Count that work in Usage switch under Use Claude in my terminal too, on unless turned off, which adds a Stop hook to Claude Code's settings beside its own and removes only that hook when off
+- Tool calls from Claude sessions outside the app count on their board, and a finished turn reported by Claude Code files its tokens under the boards it touched, split evenly, with each session counted once per board and day
+- The MCP server tells the app about every finished tool call, which board it worked on and whether it came from outside or from one of the app's own runs
+- A board's usage counter can hold work from outside the app, kept apart from runs, with the tool calls and sessions it took, and builds from before still read their own keys
+- The Share popover's Sprout row links a project in the browser instead of asking for a key
+- The Sprout widget's screenshot handler lives in MoJo, so core can drop it
+- One-layer share links carry the board's Sprout project, so their viewer shows the feedback widget too
+- Share says a one-frame link sends only that frame and makes it on first copy, and a Shared links entry with a count opens a list of the board's links where any editor can copy or delete a one-layer link after a confirm, beside the whole-board links and invite that can't be deleted
+- A scoped link opens only its layer's signed copy with the board name and Live or Owner offline, says when it was last updated with no editor online, and a deleted link says it no longer works; board-perf --scoped measures it
+- Every editor's app keeps a board's one-layer links live in a signed copy of their own, a one-layer View or Present link is that copy's link and the same one each time, and deleting a link empties its copy and clears it from the relay
+- A scoped share link has its own key derived from the board key and its id, a v2 link format that carries only that key and a verify key, and its writers sign every frame and kept entry so a viewer can't write into the copy
+- A one-layer copy holds only that layer, hoisted to where the board lays it out with its inherited theme, opacity and clip, instances and library components expanded, and only the variables and images it uses
+- A board keeps a list of its scoped share links, one per layer and mode, and a scoped copy is brought up to date with only the writes that differ
+
+#### Fixes
+
+- The app starts again: outside work is set up once this device's id is known
+- Closing a board connection sends the frames it was still sealing, so the last edit and the goodbye reach the room before the socket goes
+
 ## 0.1.34 (2026-10-26)
 
 #### New Features
