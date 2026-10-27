@@ -2,6 +2,73 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.38 (2026-10-27)
+
+#### New Features
+
+- Html exports play a composition's motion, sampled by the same kernel as the canvas; a reader who prefers reduced motion sees the poster, autopenMotion.seek and play drive it, and what the page can't play holds still with a warning naming the node and channel
+- File paths an agent writes are links: a click opens documents and media in their own app and shows anything else in its folder, never running it
+- A frame exports as a page a site builder can rebuild without guessing: Export(frame, 'page') writes page.html, page.json (autopen.page/1: roles, hug/fill/fixed sizing, single-line text, 12-column spans, links, components, tokens, page settings) and report.json with lint problems
+- Voice and notes are findable: a composition with no lines shows an empty Voiceover section with Add voiceover…, a frame inside a board section takes speaker notes and plays in Present, and a frame's menu offers Speaker notes… or Voiceover…; a composition is always one slide, never split into its scenes
+- One slide rule for Present, narrated deck export and speaker notes: top-level frames in reading order, a board section (context 'Board section') giving its frames instead, in reading order, opening one level of nested sections; the editor's slides, Present and deck export all read slideOrder
+- Every selected line offers wording suggestions: shorter ones when it runs long, same-length alternatives when it fits
+- A simpler line panel and a composition panel: a line shows its words, Voice / Delivery / Take chips that open popovers, one timing row with the fit bar, its status with Play line, and a link to the composition; the composition shows Narrator, Voice sound (Before / After, Polish, Loudness, Adjust… for tone and compression), Music under voice and Captions as one-line rows that open in place. Delivery and tone apply to all lines or one; a line keeping its own shows a purple dot with Use for all and Match. Reads of a line's recording go through recordingOf
+- The engine writes only board.recordings; playback, Present, export, shared links, asset sync and agents read lines' audio from it, a composition plays until its last line ends, and agents see spoken lengths as read-only spoken
+- Recordings live apart from what people edit: board.recordings keyed by speech key holds each spoken line's src, length and words; lines carry only their words; readers resolve through recordingOf, clipSource and playLength; moveRecordings migrates older boards
+- Polish is off by default; turning it on uses the approved sound, and Before / After compares raw with polished
+- Composition delivery and line overrides: timeline.delivery sets pace and expressiveness for every line and say.polish lets one line keep its own finish, mirroring narrator and say.voice; phononSettings resolves line over composition over default, both are validated, and the voiceover guide says to set the composition's and override only deliberately
+- Copied layers paste whole on another board or another Autopen: a copy carries its images' bytes, and instances of components left behind land as plain layers where the component cannot be found
+- Export a board as a .autopen file (File > Export Board, Home's board menu) and import it in any Autopen (File > Import Autopen Board, Home's Import); it carries the content, every image and audio file, and the thumbnail, without members, share links or requests
+- Sub-agents in the conversations list start collapsed under one row that says how many and how many are working; open groups stay open across opening a conversation
+- Agent activity in the motion editor: every quick action shows a live status pill with its steps and Stop, outlines the line, scene or slide it changes with the agent's badge, and reports a result above the dock with Undo, Show change and Continue in a conversation that fades after 8s unless hovered; failures stay. The fake claude can call tools and take its time
+- Narrated deck export: Whole deck exports every slide as one MP4 in reading order, and the export dialog offers One video or One per slide for several frames, each with how long still slides hold; both send ExportRequest.deck
+- Music clips select from their lane into a Music section (volume, fade in, fade out); Music under voice gains Fade, writing timeline.duckFade
+- Caption style popover from the export dialog and the Captions section: preview drawn with the encoder's math on the composition at the playhead, position, size, font and weight, text color, box, outline or none, box color and opacity, Reset; writes timeline.captions
+- The play bar scrubs by scene: one segment per scene with gaps at the cuts, voiceover lines as amber ticks, the scene named while you scrub, and arrows step frames instead of a Next frame button
+- Voice sound section for a composition or line: polish switch, Before/After by ear, loudness, tone and compression sliders that commit on release, Reset; Settings > Voices sets the polish new compositions start with
+- Every spoken line is finished in TypeScript before it is stored: EQ, compressor, windowed-sinc upsample to 48 kHz and BS.1770 loudness under a -2 dBTP ceiling, matching the approved ffmpeg chain; tested against its reference
+- Timeline.polish (loudness, EQ, compression) is part of each line's speech key; speechKey, needsSpeaking and phononSettings take the composition's voicing instead of its narrator, callers migrated
+- Export(ids, 'mp4', path, { deck }) makes one narrated video of slides; voiceover guide covers duckFade, caption style and deck export
+- Styled captions (position, size, font, weight, color, box or outline, two rows at a time), duckFade in the export mix, and narrated deck export: slides in order as one MP4, still slides held, letterboxed to the first slide's size
+- ReadingOrder and srtCues for decks; music dips over timeline.duckFade on the canvas
+- Ducking fade, caption style and narrated deck export in the voiceover contract
+- Voiceover guide and /voiceover skill: script, cast, timing lines to scenes, pins, fitting, narrated slides; motion guide points to it
+- Edited lines measure by their words until spoken again, a line drag is one undo step, and the verify script drives every screen
+- Caption preview on the canvas, slide speaker notes that narrate, Settings > Voices, export sound and captions remembered per board
+- Agent help menu, word pins, transcript view with cast, lanes stack overlapping lines, audition plays through Web Audio
+- Voiceover lane in Scenes view, voice line panel with delivery, takes, music and captions, voice picker, Add voiceover dialog and agent review
+- Agents write voiceover lines as say clips with no src; the Motion guide's Voiceover section covers say, narrator, duck, present, pins, fitting lines to scenes by voiced.length, and the 25 English voices
+- Narrated slides in Present: present.start 'click' waits for a click or the next key before playing, and present.advance moves on that many seconds after the composition ends
+- MP4 export picks voice and music, ducks music under the voiceover, and draws captions on the video, writes a .srt beside it, or both
+- Voiceover plays where its pins put it, and music ducks under it
+- Speak voiceover with Phonon on this computer: open boards speak edited lines in the background, store the WAV as a board asset and set the clip's src and voiced; voice library, audition and voice import over IPC
+- MotionStarts times each layer on its composition's clock, for pins; duckCurve draws ducking as gain ramps; tests for the voiceover functions
+- Voiceover line model, sync prompt, engine wrapper and clip selection in the motion store
+- Timeline.present for narrated slides
+- Voiceover data shape: speech on timeline audio clips, narrator, ducking, transcript and .srt; voice IPC contract
+
+#### Fixes
+
+- The feedback widget's region select, annotate and highlight layers undo the interface zoom, so above 100% the region box stays under the cursor
+- The voice picker is 400 px wide so descriptions read and the footer fits on one line
+- Panel popovers open beside the panel, not over it, and the line's chips show their full names
+- Quick slider presses all count: a press made before the board echoes the previous one builds on that pending value, and the echo no longer resets a newer one; the verify step holds each press across a frame, which failed every time before
+- Agent results render their markdown and fold long replies to four lines with Show more; voiceover runs reply in three short lines
+- Clicking a scene hands the right panel back from a selected line, even when the line sits in that scene
+- Number fields pass their scrub through as live writes, so a scrubbed length, start, overlap, delay, fade or wait is one undo step instead of one per pixel
+- Panel and timeline edits undo by value: Yjs undo skips a map value something newer replaced, and the speech engine replaces a timeline with its recordings a moment after each edit, so undoing a line edit did nothing; each commit is now one step that writes the person's value back (keeping recordings that still fit), a scrub or drag is one step however long it pauses, and these steps interleave with Yjs's canvas steps by time
+- Copying a layer works again: the copy handler takes payloads up to 100M characters, since a copy carries its images' bytes, and says when one is too large; a failed copy says so instead of leaving the old clipboard to be pasted
+- The motion dock's Play, Space and ruler seeks start sound at once, as the play bar's do; Present follows playback the same way
+- Sound follows play, pause and seek as they happen: the scene reports playback changes and Soundtracks.follow starts the clips inside the same click; drift is judged on one clock so playing no longer restarts sound 0.2 s in; decoded clips stay for the session in a bounded cache
+- Settings > Voices lists one line per voice, descriptions ellipsized with the full text on hover, Default aligned
+- Previews play once and the latest click wins: a click stops what plays, is spoken ahead of the picker's background length checks, and a slower earlier preview never plays late; applies to voice auditions, takes, Before / After and Settings > Voices samples
+- A line due just after the playhead plays from its first word: sound decodes once a composition is selected, shown or open in the dock, not on the first Play
+- Space plays and pauses after clicking a scene or line: the dock takes focus before its clips cancel the pointer to drag
+- A slide's length is written only on the person's notes edits, Read aloud, and the engine's voice:status done for its notes, never on selection; films with scenes, music or several lines are never slides. Builds the reported design gaps: review outlines and badges on changed scenes and link pins on pinned lines, agent-suggested wordings for long lines, Applies to all slides, a Whole deck section, a slide strip dock, and a caption preview in the MP4 export. verify-voiceover-ui runs on the real engine and catalog, waits on voice:status, and checks popovers at a 125% interface size
+- The help menu and voice picker open where they belong at any interface size, placing in interface pixels like the app's other popovers
+- Speaker notes size only a slide whose sound is just its notes; selecting a composition with more lines or music no longer cuts it to the first line's length
+- Speaker notes render from the panel, keeping the properties section table free of window globals for its tests
+
 ## 0.1.37 (2026-10-27)
 
 #### New Features
