@@ -2,6 +2,22 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.37 (2026-10-27)
+
+#### New Features
+
+- Layout grid and space and Text setting guides, read for nearly every design task, and the composer stops suggesting skills as people type
+- A presented slide zooms: Ctrl+wheel at the pointer, the bar's buttons, drag and the wheel to pan, 0 to fit again, and a click on a zoomed slide stays on it; Shift+wheel pans sideways in every scroll mode
+- Usage counts terminal work by reading the transcripts of sessions that called Autopen's tools, matched by tool_use id whatever the server is named, instead of a Stop hook in Claude Code's settings that ran in every session; launching removes the old hook and leaves the person's own
+
+#### Improvements
+
+- Runs spend less of the plan: they compact at 200k tokens, board skills are listed and read when needed instead of sent whole, tool results are compact JSON with repeated warnings folded and Print capped, get_app_state details only the run's board, screenshots top out at 1000px, and spawn_agents can put a sub-agent on opus, sonnet or haiku
+
+#### Fixes
+
+- A text measure that throws no longer breaks layout for the whole process: the error is held until Yoga finishes instead of unwinding through its wasm, which leaked its stack until every insert and screenshot failed; a Yoga instance that traps is replaced with a fresh one, sessions free by node so a repeated id can't free a node still in use, and an unknown text alignment draws as left
+
 ## 0.1.36 (2026-10-26)
 
 #### Fixes
