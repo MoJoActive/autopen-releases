@@ -2,6 +2,14 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.39 (2026-10-28)
+
+#### New Features
+
+- Cloud voices from any provider: a speech provider registry with per-model capabilities, dated prices in any unit and a cost ledger with monthly key caps, Gemini 3.8 Flash TTS and ElevenLabs Eleven v4 (21 premade voices, its audio tags, direction as a leading tag, stability for expressiveness, word pins from character timestamps, billed by its character-cost header) beside Phonon, bundled samples (ElevenLabs' free previews) measured for pitch, pace, delivery and tone, a Change voice picker with provider logos, price tiers, a Pricing dialog and every filter covering every provider, preferred voices shared on the board or the organization's list, a Voice studio and script editor with tags; plus image adjust, crop, background replace and edit, profile photos, and page exports
+- An outside Claude Code session moves itself onto a board: hand_off_conversation finds the session by its tool_use id and opens a conversation in the agent pane with the summary it wrote, titled, and the next message there resumes that session with its whole history, forked so the outside app's transcript is never written to
+- Lines hold exact pauses between words (say.pauses, a click between two words in the panel), each take reads differently in pace, liveliness and phrasing, a full-size line editor gathers words, pauses, direction, delivery and takes, Match my reading records you saying a line and the voice follows your pauses and pace, the voice picker searches and filters by gender, pitch, accent and age, and the all-lines settings lead back to the line; faint text meets 4.5:1 contrast and no interface text is under 11px
+
 ## 0.1.38 (2026-10-27)
 
 #### New Features
