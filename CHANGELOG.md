@@ -2,6 +2,90 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.40 (2026-10-29)
+
+#### Your Gravatar becomes your profile photo
+
+- Signing in to MoJo Active uses the Gravatar of your work email when you have no profile photo.
+
+#### In-app help with guides and looping clips
+
+- Help opens with Cmd+/ from Home or a board, and pressing it again shows the shortcuts.
+- Guides cover each part of Autopen, most with a short looping clip.
+- Sidebar tabs open with an intro card until you click Got it.
+- Panel sections have an info button that explains them.
+- Home search and board Find list matching guides and Settings pages.
+- The agent answers how-to questions from the guides and shows the guide's card in the thread.
+- Help's Ask agent opens a new conversation with the question filled in.
+- Settings can turn intro cards off, show hidden ones again, or restart onboarding.
+- Videos stream, so long clips play all the way through.
+
+#### Claude required, welcome film, nothing made for you
+
+- Onboarding is your profile, Claude setup and the welcome film, then Home.
+- Claude setup has no skip, and Continue waits until Claude is signed in.
+- Terminals are linked to Autopen on their own once Claude is ready.
+- The welcome film plays once, then lives in Help.
+- No sample board is created.
+
+#### Open video scenes, drag out of auto layout, paste at pointer
+
+- Double-click a scene of a video to work inside it, and press Escape or Done to leave.
+- A video's label shows a play mark and its length.
+- Hovering a video shows its play bar.
+- Right-click Select layer reaches layers under others or off screen at the playhead.
+- Timeline rows select on the canvas and follow the canvas selection.
+- Drag auto layout children to reorder them or move them into another container.
+- Paste lands at the pointer.
+- Copied layers no longer show up in clipboard history apps.
+- Double-click a frame's name on the canvas to rename it.
+- Ask on selection stays centered on the selection.
+- Videos play from the start when shown at their poster, and stop at their full length.
+
+#### Your organization account photo becomes your profile photo
+
+- Signing in to the organization uses your account picture when you have no profile photo.
+- It is offered once per account, so a photo you removed stays removed.
+
+#### A single file export asks where to save it
+
+- Exporting one file opens a save dialog, so you can rename it.
+- Exporting several files still asks for a folder.
+
+#### Hover tips on usage charts and bars
+
+- Hovering a chart day shows its total and each person's share.
+- Hovering a bar slice shows its tokens and percent.
+- Tooltips can span several lines.
+
+#### What's new reads as bullets
+
+- What's new lists each change as its own bullet, under a short heading per feature.
+- Commits write a short subject and one body bullet per change.
+
+#### Pacing in the Claude usage popover
+
+- A mark on each bar where even use would be
+- Where the window lands at this rate (~42% at reset, or Full in 2 hr 46 min)
+- Amber and red like the bars
+- Held for the first 5% of a window
+
+#### Large boards open and edit without stalls
+
+- Undo history no longer keeps deleted content in memory and saved boards forever.
+- Saving collects deleted content off the main thread, so boards open faster.
+- New tabs read their board before main loads it.
+- A board with an unreadable key no longer keeps the window from opening.
+- Panels re-read the board only when it changes, not on every selection.
+- Typing in the agent pane no longer lags while an agent edits.
+- Agent edits lay out only what they touched.
+- Screenshots and videos render only the part they need.
+
+#### New board always defaults to the organization
+
+- New boards go to the organization's folder, or its Drafts, whenever there is one.
+- This computer is used only when there is no organization, or when you pick one of its folders.
+
 ## 0.1.39 (2026-10-28)
 
 #### New Features
