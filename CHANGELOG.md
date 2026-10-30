@@ -2,6 +2,22 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.44 (2026-10-30)
+
+#### The directory keeps everyone's Claude usage
+
+- PUT /usage keeps one report per account and device; GET /usage lists them all
+- The MoJo directory provider reports and reads team usage for Settings > Usage
+
+#### See the whole team's usage, and numbers stay current
+
+- Signed in to an organization that keeps usage, Usage opens on everyone's, boards you never joined included; a picker narrows it to this computer
+- Each device sends its own usage to the organization a minute after start and after runs
+- Opening Usage catches closed boards up with the relay first, so teammates' recent runs show
+- Token counts read in billions and trillions (1.1B, not 1120.9M)
+- Claude Code terminal work that used Autopen always counts; the switch for it is gone
+- Closing a board no longer risks saving older usage numbers over newer ones
+
 ## 0.1.43 (2026-10-30)
 
 #### Share links get a tab icon and the app's zoom keys
