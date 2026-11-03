@@ -2,6 +2,13 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.54 (2026-11-03)
+
+#### A person's cursor shows only on the page they're on
+
+- Someone on another page no longer leaves a cursor on yours, so a duplicated page can't look like a shared one that stopped syncing
+- People on older apps, which don't say their page, still show as before
+
 ## 0.1.53 (2026-11-03)
 
 #### Clipping masks, as in Figma
