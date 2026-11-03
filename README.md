@@ -4,13 +4,13 @@ A multiplayer design canvas where Claude designs alongside you.
 
 ## Download
 
-Version 0.1.54.
+Version 0.1.55.
 
 | | |
 |---|---|
-| **Mac** with Apple silicon (M1 and later) | [Autopen-MoJo-Active-0.1.54-arm64.dmg](https://github.com/MoJoActive/autopen-releases/releases/download/v0.1.54/Autopen-MoJo-Active-0.1.54-arm64.dmg) |
-| **Mac** with an Intel processor | [Autopen-MoJo-Active-0.1.54-x64.dmg](https://github.com/MoJoActive/autopen-releases/releases/download/v0.1.54/Autopen-MoJo-Active-0.1.54-x64.dmg) |
-| **Windows** 10 and 11 | [Autopen-MoJo-Active-0.1.54-setup.exe](https://github.com/MoJoActive/autopen-releases/releases/download/v0.1.54/Autopen-MoJo-Active-0.1.54-setup.exe) |
+| **Mac** with Apple silicon (M1 and later) | [Autopen-MoJo-Active-0.1.55-arm64.dmg](https://github.com/MoJoActive/autopen-releases/releases/download/v0.1.55/Autopen-MoJo-Active-0.1.55-arm64.dmg) |
+| **Mac** with an Intel processor | [Autopen-MoJo-Active-0.1.55-x64.dmg](https://github.com/MoJoActive/autopen-releases/releases/download/v0.1.55/Autopen-MoJo-Active-0.1.55-x64.dmg) |
+| **Windows** 10 and 11 | [Autopen-MoJo-Active-0.1.55-setup.exe](https://github.com/MoJoActive/autopen-releases/releases/download/v0.1.55/Autopen-MoJo-Active-0.1.55-setup.exe) |
 
 On a Mac, open the DMG and drag Autopen MoJo Active to Applications. On Windows, run the installer; it installs for your account only and needs no administrator rights.
 
