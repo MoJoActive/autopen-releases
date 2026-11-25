@@ -2,6 +2,51 @@
 
 What changed in each version of Autopen MoJo Active.
 
+## 0.1.58 (2026-11-25)
+
+#### Faster big boards, Stop in the composer, page pill, Getty and more
+
+- Big boards open without freezing the app, agent edits no longer stall the window, and agents on one board share one working copy
+- Video exports with footage are 2 to 4x faster, with memory kept flat
+- Stop an agent from the message box or with Esc; stopping the lead stops its sub-agents
+- Pages live in a pill at the canvas top-left; Layers is just layers; new boards start with Cover and Page 1
+- Getty Images is a Media source, shared with the whole company when an admin connects it
+- Your Claude Code skills show under Only you and first in the / menu; /compact goes straight to the agent
+- Find in the conversation with Cmd/Ctrl+F
+- The agent's browser shows its URL with Copy and Open in browser; a stuck tab fails in seconds instead of minutes
+- Fonts installed on the computer draw on the board and are kept with it
+- Hidden layers keep their placeholder at any depth
+- Following an agent switches to its page; layer links open the layer's page
+- Figma imports keep Linear burn and dodge, gradient direction and gradient strokes
+- Share opens on the selection; the Usage table sorts by any column
+- Export closes after success with Show in folder; Copy as PNG follows the chosen size
+- Ctrl/Cmd + and - zoom on every keyboard layout; copying text drops soft wraps; double-click selects all text
+- Send never sends twice; the session-limit notice no longer blocks sending
+- Match my reading in the Voice studio no longer gets stuck
+- Claude sign-in on Windows finds new installs and uses the terminal's settings folder
+- Help clips and guides match the app
+
+#### Feedback widget on scoped links, agents know the linked project
+
+- Selection, artboard and one-layer share links get the Sprout feedback widget whenever the board is linked, including links made before linking
+- Agents on a linked board know its Sprout project from the moment it's linked, mid-conversation too
+- Getty joins the company key list
+
+#### Warn about an @input outside the script header
+
+- An @input line written outside the /** */ header gets a warning that says to move it, even when the script then fails
+
+#### Transitions no longer leave empty frames at the end
+
+- A film that ended with its last scene gets shorter by each transition's overlap
+- One that runs past its last scene (music, a held end) keeps its length, and agents get a warning
+
+#### Connectors draw above zones and wait for fonts
+
+- Connectors draw above the zone and lane frames behind the nodes, so a line crossing a zone it doesn't belong to no longer disappears under its fill
+- Connect drawn while fonts are loading redraws itself once they land, in the same call, instead of asking for a second one
+- Get reads a script's json input back as the list or object it was given
+
 ## 0.1.57 (2026-11-04)
 
 #### View links play motion and show just the board name
